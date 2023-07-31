@@ -9,32 +9,23 @@
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-  <section class="hero is-white is-fullheight has-text-centered">
-    <div class="hero-head">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <span class="navbar-item">
-            Zayn Damji
-          </span>
-        </div>
+  <nav class="navbar" role="navigation" aria-label="main navigation" style="position: sticky; top: 0;">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://github.com/zayndamji" target="_blank">
+        <figure class="image is-24x24">
+          <img src="github.png">
+        </figure>
+      </a>
       
-        <div class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item" href="https://github.com/zayndamji" target="_blank">
-              <figure class="image is-24x24">
-                <img src="github.png">
-              </figure>
-            </a>
-      
-            <a class="navbar-item" href="https://www.youtube.com/@damji" target="_blank">
-              <figure class="image is-24x24">
-                <img src="youtube.png">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </nav>
+      <a class="navbar-item" href="https://www.youtube.com/@damji" target="_blank">
+        <figure class="image is-24x24">
+          <img src="youtube.png">
+        </figure>
+      </a>
     </div>
+  </nav>
+
+  <section class="hero is-white is-fullheight-with-navbar has-text-centered">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
@@ -50,5 +41,105 @@
       </div>
     </div>
   </section>
+
+  <section class="section projects is-small is-white has-text-centered">
+    <div class="container is-narrow">
+      <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Projects</h1>
+      
+      <br><br>
+
+      <div class="columns is-multiline is-vcentered">
+        <div class="column is-half">
+          <div class="box background-image i1">
+            <h1 class="title is-5">Improved Quizlet</h1>
+            <div class="content is-size-6">
+              <p>Improved Quizlet is a website focused on being a simple quizzing website, with no extra bloatware.</p>
+              <p>
+                I developed it using 
+                  <a class="white-link" href="https://nodejs.org/en" target="_blank">NodeJS</a>, 
+                  <a class="white-link" href="https://github.com/pugjs/pug" target="_blank">PugJS</a>, 
+                  CSS, and JS. This website is compiled into one file using a NodeJS compile script, making serving easier and less network costly.
+              </p>
+            </div>
+            <a class="button is-dark is-outlined is-rounded" href="https://improvedquizlet.onrender.com/" target="_blank"><span>Visit Website</span></a>
+            <a class="button is-dark is-outlined is-rounded" href="https://replit.com/@zamji/ImprovedQuizlet/" target="_blank"><span>View Source Code</span></a>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="box background-image i2">
+            <h1 class="title is-5">RobotEvents API Wrapper</h1>
+            <div class="content is-size-6">
+              <p>NPM Package 'robotevents-api' is a wrapper for the RobotEvents API.</p>
+              <p>
+                I developed it using 
+                  <a class="white-link" href="https://nodejs.org/en" target="_blank">NodeJS</a>, and published it to 
+                  <a class="white-link" href="https://www.npmjs.com/" target="_blank">Node Package Manager</a>.
+                The reason I originally created it was to simplify the process of using and authenticating requests to the API.<br>
+              </p>
+            </div>
+            <a class="button is-dark is-outlined is-rounded" href="https://www.npmjs.com/package/robotevents-api" target="_blank"><span>View Package</span></a>
+            <a class="button is-dark is-outlined is-rounded" href="https://github.com/zayndamji/robotevents-api" target="_blank"><span>View Source Code</span></a>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="box background-image i3">
+            <h1 class="title is-5">Boost Robotics</h1>
+            <div class="content is-size-6">
+              <p>BoostRobotics.org is the home of Boost Robotics, a organization that strives to bring competitive robotics to underrepresented groups in STEM.</p>
+              <p>
+                I developed it using 
+                  <a class="white-link" href="https://nodejs.org/en" target="_blank">NodeJS</a>,
+                  <a class="white-link" href="https://github.com/pugjs/pug" target="_blank">PugJS</a>,
+                  <a class="white-link" href="https://expressjs.com/" target="_blank">ExpressJS</a>,
+                  CSS, and JS.
+                This website uses custom authentication for users to see curriculum. <br>
+              </p>
+            </div>
+            <a class="button is-dark is-outlined is-rounded" href="https://boostrobotics.org" target="_blank"><span>Visit Website</span></a>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="box background-image i4">
+            <h1 class="title is-5">392X SpeedZappers</h1>
+            <div class="content is-size-6">
+              <p>SpeedZappers.com is the home of my VEX robotics team, 392X SpeedZappers.</p>
+              <p>
+                I developed it using 
+                  <a class="white-link" href="https://nodejs.org/en" target="_blank">NodeJS</a>,
+                  <a class="white-link" href="https://github.com/pugjs/pug" target="_blank">PugJS</a>, 
+                  <a class="white-link" href="https://expressjs.com/" target="_blank">ExpressJS</a>, 
+                  CSS, and JS.
+                The /competitions page is automatically generated using the 
+                <a class="white-link" href="https://www.robotevents.com/api/v2" target="_blank">RobotEvents API</a>. <br>
+              </p>
+            </div>
+            <a class="button is-dark is-outlined is-rounded" href="https://speedzappers.com" target="_blank"><span>Visit Website</span></a>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="box background-image i5">
+            <h1 class="title is-5">Raagini School of Music</h1>
+            <div class="content is-size-6">
+              <p>Raagini.org is the home of the Raagini School of Music.</p>
+              <p>
+                I developed it using 
+                  <a class="white-link" href="https://nodejs.org/en" target="_blank">NodeJS</a>,
+                  <a class="white-link" href="https://github.com/pugjs/pug" target="_blank">PugJS</a>, 
+                  CSS, and JS.
+                Raagini.org is structured as a single page application, with multiple sections dividing up content. <br>
+              </p>
+            </div>
+            <a class="button is-dark is-outlined is-rounded" href="https://raagini.org/" target="_blank"><span>Visit Website</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
 </body>
 </html>
