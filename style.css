@@ -21,22 +21,14 @@ a.white-link:hover {
   border-radius: 48px;
 }
 
-.box.background-image.i1 {
-  background-image: url('improvedquizlet.jpg');
-}
-
-.box.background-image.i2 {
+.box.background-image.robotevents-api {
   background-image: url('roboteventsapi.jpg');
 }
 
-.box.background-image.i3 {
+.box.background-image.boost-robotics {
   background-image: url('boostrobotics.jpg');
 }
 
-.box.background-image.i4 {
-  background-image: url('speedzappers.jpg');
-}
-
-.box.background-image.i5 {
-  background-image: url('raagini.jpg');
+.box.background-image.improved-quizlet {
+  background-image: url('improvedquizlet.jpg');
 }
