@@ -19,6 +19,7 @@ a.white-link:hover {
 
   padding: 4rem;
   border-radius: 48px;
+  font-weight: 500;
 }
 
 .box.background-image.robotevents-api {
@@ -35,4 +36,8 @@ a.white-link:hover {
 
 .box.background-image.candy-clicker {
   background-image: url('candyclicker.png');
+}
+
+.box.background-image.i-notes {
+  background-image: url('inotes.png');
 }
