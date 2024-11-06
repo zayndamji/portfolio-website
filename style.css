@@ -23,25 +23,25 @@ a.white-link:hover {
 }
 
 .box.background-image.robotevents-api {
-  background-image: url('roboteventsapi.jpg');
+  background-image: url('screenshots/roboteventsapi.jpg');
 }
 
 .box.background-image.boost-robotics {
-  background-image: url('boostrobotics.jpg');
+  background-image: url('screenshots/boostrobotics.jpg');
 }
 
 .box.background-image.improved-quizlet {
-  background-image: url('improvedquizlet.jpg');
+  background-image: url('screenshots/improvedquizlet.jpg');
 }
 
 .box.background-image.candy-clicker {
-  background-image: url('candyclicker.png');
+  background-image: url('screenshots/candyclicker.png');
 }
 
 .box.background-image.i-notes {
-  background-image: url('inotes.png');
+  background-image: url('screenshots/inotes.png');
 }
 
 .box.background-image.memory-flip {
-  background-image: url('memoryflip.png');
+  background-image: url('screenshots/memoryflip.png');
 }
