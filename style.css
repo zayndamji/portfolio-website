@@ -41,3 +41,7 @@ a.white-link:hover {
 .box.background-image.i-notes {
   background-image: url('inotes.png');
 }
+
+.box.background-image.memory-flip {
+  background-image: url('memoryflip.png');
+}
