@@ -45,3 +45,7 @@ a.white-link:hover {
 .box.background-image.memory-flip {
   background-image: url('screenshots/memoryflip.png');
 }
+
+.box.background-image.ytdl {
+  background-image: url('screenshots/ytdl.png');
+}
