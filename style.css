@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif
+body, .navbar {
+  background-color: rgb(22, 22, 22);
+}
+
+body, .navbar, .title, .subtitle, .content {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
 }
 
 a.white-link {
-  color: rgb(0, 76, 255);
+  color: rgb(168, 194, 255);
 }
 
 a.white-link:hover {
-  color: rgb(0, 56, 188);
+  color: rgb(105, 150, 255);
 }
 
 .box.background-image {
@@ -23,27 +28,27 @@ a.white-link:hover {
 }
 
 .box.background-image.robotevents-api {
-  background-image: url('screenshots/roboteventsapi.jpg');
+  background-image: url('screenshots/roboteventsapi.png');
 }
 
-.box.background-image.boost-robotics {
-  background-image: url('screenshots/boostrobotics.jpg');
+.box.background-image.boost {
+  background-image: url('screenshots/boost.png');
 }
 
 .box.background-image.improved-quizlet {
-  background-image: url('screenshots/improvedquizlet.jpg');
+  background-image: url('screenshots/improvedquizlet.png');
 }
 
-.box.background-image.candy-clicker {
-  background-image: url('screenshots/candyclicker.png');
+.box.background-image.clicker {
+  background-image: url('screenshots/clicker.png');
 }
 
-.box.background-image.i-notes {
-  background-image: url('screenshots/inotes.png');
+.box.background-image.notes {
+  background-image: url('screenshots/notes.png');
 }
 
-.box.background-image.memory-flip {
-  background-image: url('screenshots/memoryflip.png');
+.box.background-image.flip {
+  background-image: url('screenshots/flip.png');
 }
 
 .box.background-image.ytdl {
