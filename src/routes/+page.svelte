@@ -8,21 +8,17 @@
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
   @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css';
 
-  body, .navbar {
+  .navbar {
     background-color: rgb(22, 22, 22);
   }
 
-  .title, .subtitle, .content, a.white-link {
+  .title, .subtitle {
     color: white;
     font-family: 'Open Sans', sans-serif;
   }
-
-  a.white-link:hover {
-    color: rgb(105, 150, 255);
-  }
 </style>
 
-<nav class="navbar is-dark" role="navigation">
+<nav class="navbar is-dark">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://github.com/zayndamji" target="_blank">
       <img src="resources/images/github.png" width="24" height="24" alt="GitHub" />
