@@ -1,4 +1,4 @@
-const roles = ["Programmer", "Developer", "Designer"];
+const roles = ["Programmer", "Developer", "Designer", "Singer"];
 const textElement = document.getElementById("typewriter-text");
 const cursor = document.querySelector(".cursor");
 
