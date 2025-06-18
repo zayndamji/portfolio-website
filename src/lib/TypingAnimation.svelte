@@ -33,9 +33,6 @@
 
   onMount(() => {
     type();
-    const cursorInterval = setInterval(() => {
-      cursorVisible = !cursorVisible;
-    }, 500);
 
     return () => {
       clearTimeout(typeTimeout);
@@ -58,5 +55,6 @@
 </style>
 
 <h2 class="subtitle is-size-4-tablet has-text-white mt-5">
-  <span>{typewriterText}</span><span class="cursor has-text-white">{cursorVisible ? '|' : ''}</span>
+  <span>{typewriterText}</span>
+  <span class="cursor has-text-white">|</span>
 </h2>
