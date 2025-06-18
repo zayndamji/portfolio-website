@@ -7,4 +7,4 @@ My name is Zayn, and this is my portfolio website.
 # Image of Website
 Here is an image of the website, though it is best to experience directly at the link above.  
 <br>
-<img src="https://raw.githubusercontent.com/zayndamji/portfolio-website/refs/heads/main/websiteScreenshot.png" style="width: 100%;">
+<img src="https://zayndamji.dev/resources/images/websiteScreenshot.png" style="width: 100%;">

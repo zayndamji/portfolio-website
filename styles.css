@@ -28,31 +28,31 @@ a.white-link:hover {
 }
 
 .box.background-image.robotevents-api {
-  background-image: url('screenshots/roboteventsapi.png');
+  background-image: url('resources/screenshots/roboteventsapi.png');
 }
 
 .box.background-image.boost {
-  background-image: url('screenshots/boost.png');
+  background-image: url('resources/screenshots/boost.png');
 }
 
 .box.background-image.improved-quizlet {
-  background-image: url('screenshots/improvedquizlet.png');
+  background-image: url('resources/screenshots/improvedquizlet.png');
 }
 
 .box.background-image.clicker {
-  background-image: url('screenshots/clicker.png');
+  background-image: url('resources/screenshots/clicker.png');
 }
 
 .box.background-image.notes {
-  background-image: url('screenshots/notes.png');
+  background-image: url('resources/screenshots/notes.png');
 }
 
 .box.background-image.flip {
-  background-image: url('screenshots/flip.png');
+  background-image: url('resources/screenshots/flip.png');
 }
 
 .box.background-image.ytdl {
-  background-image: url('screenshots/ytdl.png');
+  background-image: url('resources/screenshots/ytdl.png');
 }
 
 .cursor {
