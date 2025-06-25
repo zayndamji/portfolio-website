@@ -9,7 +9,7 @@
   @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css';
 
   .navbar {
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(23, 23, 23);
   }
 
   .title, .subtitle {
@@ -18,7 +18,7 @@
   }
 </style>
 
-<nav class="navbar is-dark">
+<nav class="navbar is-dark is-fixed-bottom">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://github.com/zayndamji" target="_blank">
       <img src="resources/images/github.png" width="24" height="24" alt="GitHub" />
@@ -31,6 +31,14 @@
     <a class="navbar-item" href="https://www.youtube.com/@11101B_BarcbotsGettingThere" target="_blank">
       <img src="resources/images/robot.png" width="24" height="24" alt="Robotics Channel" />
     </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <div class="content is-size-6 pr-4 is-flex is-justify-content-center is-align-content-center is-flex-wrap-wrap">
+        <p>© &nbsp;Zayn Damji</p>
+      </div>
+    </div>
   </div>
 </nav>
 
