@@ -23,8 +23,13 @@
     <a class="navbar-item" href="https://github.com/zayndamji" target="_blank">
       <img src="resources/images/github.png" width="24" height="24" alt="GitHub" />
     </a>
+
     <a class="navbar-item" href="https://www.youtube.com/@damji" target="_blank">
-      <img src="resources/images/youtube.png" width="24" height="24" alt="YouTube" />
+      <img src="resources/images/music.png" width="24" height="24" alt="Music Channel" />
+    </a>
+
+    <a class="navbar-item" href="https://www.youtube.com/@11101B_BarcbotsGettingThere" target="_blank">
+      <img src="resources/images/robot.png" width="24" height="24" alt="Robotics Channel" />
     </a>
   </div>
 </nav>
