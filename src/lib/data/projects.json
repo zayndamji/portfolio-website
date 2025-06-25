@@ -6,16 +6,18 @@
     "buttons": [
       { "href": "https://boostrobotics.org", "text": "Visit Website", "disabled": false },
       { "text": "Source Code Not Available", "disabled": true }
-    ]
+    ],
+    "tags": ["Pug", "HTML/CSS", "JS", "Node"]
   },
   {
     "title": "Improved Quizlet",
     "backgroundImage": "resources/screenshots/improvedquizlet.png",
-    "details": "Improved Quizlet is a website focused on being a simple quizzing website, with no extra bloatware.<br> I developed it using <a class=\"white-link\" href=\"https://nodejs.org/en\" target=\"_blank\">NodeJS</a>, <a class=\"white-link\" href=\"https://github.com/pugjs/pug\" target=\"_blank\">PugJS</a>, CSS, and JS. This website is compiled into one file using a NodeJS compile script, making serving easier and less network costly.",
+    "details": "Improved Quizlet is a website focused on being a simple, bloat-free quizzing website.<br> I developed it using <a class=\"white-link\" href=\"https://nodejs.org/en\" target=\"_blank\">NodeJS</a>, <a class=\"white-link\" href=\"https://github.com/pugjs/pug\" target=\"_blank\">PugJS</a>, CSS, and JS. This website is compiled into one file using a NodeJS compile script, making serving easier and less network costly.",
     "buttons": [
       { "href": "https://improvedquizlet.onrender.com/", "text": "Visit Website", "disabled": false },
       { "text": "Source Code Not Available", "disabled": true }
-    ]
+    ],
+    "tags": ["Pug", "HTML/CSS", "JS", "Node"]
   },
   {
     "title": "RobotEvents API Wrapper",
@@ -24,7 +26,8 @@
     "buttons": [
       { "href": "https://www.npmjs.com/package/robotevents-api", "text": "View NPM Package", "disabled": false },
       { "href": "https://github.com/zayndamji/robotevents-api", "text": "Source Code", "disabled": false }
-    ]
+    ],
+    "tags": ["Node", "JS", "NPM"]
   },
   {
     "title": "Candy Clicker",
@@ -33,7 +36,8 @@
     "buttons": [
       { "href": "https://clicker.zayndamji.dev/", "text": "Play Game", "disabled": false },
       { "href": "https://github.com/zayndamji/candy-clicker", "text": "Source Code", "disabled": false }
-    ]
+    ],
+    "tags": ["HTML/CSS", "JS"]
   },
   {
     "title": "iNotes",
@@ -42,7 +46,8 @@
     "buttons": [
       { "href": "https://notes.zayndamji.dev/", "text": "Visit the Webapp", "disabled": false },
       { "href": "https://github.com/zayndamji/iNotes", "text": "Source Code", "disabled": false }
-    ]
+    ],
+    "tags": ["HTML/CSS", "JS"]
   },
   {
     "title": "Memory Flip",
@@ -51,15 +56,17 @@
     "buttons": [
       { "href": "https://flip.zayndamji.dev/", "text": "Play Game", "disabled": false },
       { "href": "https://github.com/zayndamji/memory-flip", "text": "Source Code", "disabled": false }
-    ]
+    ],
+    "tags": ["HTML/CSS", "JS"]
   },
   {
     "title": "YouTube Downloader",
     "backgroundImage": "resources/screenshots/ytdl.png",
-    "details": "YouTube Downloader, or YTDL, allows you to download YouTube videos in MP4, WEBM, and MP3, and also allows you to specify format/bitrate.<br> I developed it using NodeJS, FFMpeg, HTML, JS, and CSS.<br> The backend is run on a Raspberry Pi 5, and stores a temporary cache of video/audio.",
+    "details": "YouTube Downloader, or YTDL, allows you to download YouTube videos in MP4, WEBM, and MP3, and also allows you to specify format/bitrate.<br> I developed it using NodeJS, FFmpeg, HTML, JS, and CSS.<br> The backend is run on a Raspberry Pi 5, and stores a temporary cache of video/audio.",
     "buttons": [
       { "text": "Live Demo Not Available", "disabled": true },
       { "href": "https://github.com/zayndamji/youtube-downloader", "text": "Source Code", "disabled": false }
-    ]
+    ],
+    "tags": ["HTML/CSS", "JS", "Node", "FFmpeg"]
   }
 ]

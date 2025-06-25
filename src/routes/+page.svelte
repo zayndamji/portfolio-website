@@ -2,6 +2,18 @@
   import ProjectCard from '$lib/ProjectCard.svelte';
   import TypingAnimation from '$lib/TypingAnimation.svelte';
   import projects from '$lib/data/projects.json';
+
+  // Get unique tags from all projects
+  const allTags = Array.from(
+    new Set(projects.flatMap(project => project.tags))
+  ).sort();
+
+  let selectedTag = 'All';
+
+  // Reactive filtered list
+  $: filteredProjects = selectedTag === 'All'
+    ? projects
+    : projects.filter(project => project.tags.includes(selectedTag));
 </script>
 
 <style>
@@ -58,9 +70,42 @@
 <section class="section projects is-white has-text-centered">
   <div class="container is-narrow">
     <h1 class="title is-size-3-desktop is-size-4-mobile">Projects</h1>
-    <br /><br />
+
+    <!-- Tag filter buttons -->
+    <div class="buttons is-centered is-flex">
+      <button
+        class="button is-rounded m-1"
+
+        class:has-text-white={selectedTag !== 'All'}
+        class:has-text-black={selectedTag === 'All'}
+
+        class:is-light={selectedTag === 'All'}
+        class:is-dark={selectedTag !== 'All'}
+
+        on:click={() => selectedTag = 'All'}
+      >
+        All
+      </button>
+      {#each allTags as tag}
+        <button
+          class="button is-rounded m-1 has-text-white"
+
+          class:has-text-white={selectedTag !== tag}
+          class:has-text-black={selectedTag === tag}
+
+          class:is-light={selectedTag === tag}
+          class:is-dark={selectedTag !== tag}
+
+          on:click={() => selectedTag = tag}
+        >
+          {tag}
+        </button>
+      {/each}
+    </div>
+
+    <!-- Filtered Projects -->
     <div class="columns is-multiline is-vcentered">
-      {#each projects as project (project.title)}
+      {#each filteredProjects as project (project.title)}
         <div class="column is-half">
           <ProjectCard {project} />
         </div>
