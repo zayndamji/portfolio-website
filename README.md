@@ -9,4 +9,4 @@ Here is an image of the website, though it is best to experience directly at the
 <br>
 <img src="https://zayndamji.dev/resources/images/websiteScreenshot.png" style="width: 100%;">
 
-**AI Use Statement**: I have utilized AI to help me debug code & provide feedback.
+*AI Use Statement*: I have utilized AI to help me debug code & provide feedback.
