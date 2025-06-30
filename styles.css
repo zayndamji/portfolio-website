@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-body, .navbar {
+body {
   background-color: rgb(22, 22, 22);
+}
+
+.navbar {
+  background-color: rgb(24, 24, 24);
 }
 
 body, .navbar, .title, .subtitle, .content {
