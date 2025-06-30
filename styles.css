@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 body, .navbar {
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(22, 22, 22);
 }
 
 body, .navbar, .title, .subtitle, .content {
@@ -28,38 +28,29 @@ a.white-link:hover {
 }
 
 .box.background-image.robotevents-api {
-  background-image: url('resources/screenshots/roboteventsapi.png');
+  background-image: url('screenshots/roboteventsapi.png');
 }
 
 .box.background-image.boost {
-  background-image: url('resources/screenshots/boost.png');
+  background-image: url('screenshots/boost.png');
 }
 
 .box.background-image.improved-quizlet {
-  background-image: url('resources/screenshots/improvedquizlet.png');
+  background-image: url('screenshots/improvedquizlet.png');
 }
 
 .box.background-image.clicker {
-  background-image: url('resources/screenshots/clicker.png');
+  background-image: url('screenshots/clicker.png');
 }
 
 .box.background-image.notes {
-  background-image: url('resources/screenshots/notes.png');
+  background-image: url('screenshots/notes.png');
 }
 
 .box.background-image.flip {
-  background-image: url('resources/screenshots/flip.png');
+  background-image: url('screenshots/flip.png');
 }
 
 .box.background-image.ytdl {
-  background-image: url('resources/screenshots/ytdl.png');
-}
-
-.cursor {
-  display: inline-block;
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
+  background-image: url('screenshots/ytdl.png');
 }
