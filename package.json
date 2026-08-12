@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio site",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
