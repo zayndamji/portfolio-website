@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
-<body>
+<body class="has-navbar-fixed-bottom">
   <nav class="navbar is-fixed-bottom">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://github.com/zayndamji" target="_blank">
@@ -23,14 +23,8 @@
       <a class="navbar-item" href="https://www.youtube.com/@barcbots" target="_blank">
         <img src="robot.png" width="24" height="24" alt="Robotics Channel" />
       </a>
-    </div>
 
-    <div class="navbar-menu">
-      <div class="navbar-end">
-        <div class="content is-size-6 pr-4 is-flex is-justify-content-center is-align-content-center is-flex-wrap-wrap">
-          <p>© &nbsp;Zayn Damji</p>
-        </div>
-      </div>
+      <span class="navbar-item ml-auto">© Zayn Damji</span>
     </div>
   </nav>
 
@@ -45,7 +39,7 @@
               <span id="typewriter-text"></span>
             </h2>
 
-            <h2 class="subtitle is-size-5-tablet">↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explore my work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓</h2>
+            <h2 class="subtitle is-size-5-tablet explore">Explore my work</h2>
 
             <br>
 
@@ -58,13 +52,13 @@
     </div>
   </section>
 
-  <section class="section projects is-small is-white has-text-centered">
-    <div class="container is-narrow">
+  <section class="section projects has-text-centered">
+    <div class="container">
       <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Projects</h1>
-      
+
       <br><br>
 
-      <div class="columns is-multiline is-vcentered">
+      <div class="columns is-multiline">
         <div class="column is-half">
           <div class="box background-image boost">
             <h1 class="title is-5">Boost Robotics</h1>
@@ -79,8 +73,10 @@
                 This website uses custom authentication for users to see curriculum. <br>
               </p>
             </div>
-            <a class="button is-light is-outlined is-rounded" href="https://boostrobotics.org" target="_blank"><span>Visit Website</span></a>
-            <a class="button is-light is-outlined is-rounded" disabled><span>Source Code Protected</span></a>
+            <div class="buttons is-centered">
+              <a class="button is-light is-outlined is-rounded" href="https://boostrobotics.org" target="_blank"><span>Visit Website</span></a>
+              <button class="button is-light is-outlined is-rounded" disabled><span>Source Code Protected</span></button>
+            </div>
           </div>
         </div>
 
@@ -96,13 +92,13 @@
                   CSS, and JS. This website is compiled into one file using a NodeJS compile script, making serving easier and less network costly.
               </p>
             </div>
-            <a class="button is-light is-outlined is-rounded" href="https://improvedquizlet.onrender.com/" target="_blank"><span>Visit Website</span></a>
-            <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/improved-quizlet" target="_blank"><span>Source Code</span></a>
+            <div class="buttons is-centered">
+              <a class="button is-light is-outlined is-rounded" href="https://improvedquizlet.onrender.com/" target="_blank"><span>Visit Website</span></a>
+              <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/improved-quizlet" target="_blank"><span>Source Code</span></a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="columns is-multiline is-vcentered">
         <div class="column is-half">
           <div class="box background-image robotevents-api">
             <h1 class="title is-5">RobotEvents API Wrapper</h1>
@@ -115,8 +111,10 @@
                 This package simplifies the process of using and authenticating requests to the API.<br>
               </p>
             </div>
-            <a class="button is-light is-outlined is-rounded" href="https://www.npmjs.com/package/robotevents-api" target="_blank"><span>View NPM Package</span></a>
-            <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/robotevents-api" target="_blank"><span>Source Code</span></a>
+            <div class="buttons is-centered">
+              <a class="button is-light is-outlined is-rounded" href="https://www.npmjs.com/package/robotevents-api" target="_blank"><span>View NPM Package</span></a>
+              <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/robotevents-api" target="_blank"><span>Source Code</span></a>
+            </div>
           </div>
         </div>
 
@@ -130,13 +128,13 @@
                 The upgrades section of the page is generated from a predefined object.
               </p>
             </div>
-            <a class="button is-light is-outlined is-rounded" href="https://clicker.zayndamji.dev/" target="_blank"><span>Play Game</span></a>
-            <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/candy-clicker" target="_blank"><span>Source Code</span></a>
+            <div class="buttons is-centered">
+              <a class="button is-light is-outlined is-rounded" href="https://clicker.zayndamji.dev/" target="_blank"><span>Play Game</span></a>
+              <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/candy-clicker" target="_blank"><span>Source Code</span></a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="columns is-multiline is-vcentered">
         <div class="column is-half">
           <div class="box background-image notes">
             <h1 class="title is-5">iNotes</h1>
@@ -147,8 +145,10 @@
                 This website offers subtle user-oriented features, while still offering the core functionality of a notes app.
               </p>
             </div>
-            <a class="button is-light is-outlined is-rounded" href="https://notes.zayndamji.dev/" target="_blank"><span>Visit the Webapp</span></a>
-            <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/iNotes" target="_blank"><span>Source Code</span></a>
+            <div class="buttons is-centered">
+              <a class="button is-light is-outlined is-rounded" href="https://notes.zayndamji.dev/" target="_blank"><span>Visit the Webapp</span></a>
+              <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/iNotes" target="_blank"><span>Source Code</span></a>
+            </div>
           </div>
         </div>
 
@@ -162,32 +162,32 @@
                 This website multiple customization features, such as dark and light themes.
               </p>
             </div>
-            <a class="button is-light is-outlined is-rounded" href="https://flip.zayndamji.dev/" target="_blank"><span>Play Game</span></a>
-            <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/memory-flip" target="_blank"><span>Source Code</span></a>
+            <div class="buttons is-centered">
+              <a class="button is-light is-outlined is-rounded" href="https://flip.zayndamji.dev/" target="_blank"><span>Play Game</span></a>
+              <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/memory-flip" target="_blank"><span>Source Code</span></a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="columns is-multiline is-vcentered">
-      <div class="column is-half">
-        <div class="box background-image ytdl">
-          <h1 class="title is-5">YouTube Downloader</h1>
-          <div class="content is-size-6">
-            <p>YouTube Downloader, or YTDL, allows you to download YouTube videos in MP4, WEBM, and MP3, and also allows you to specify format/bitrate.</p>
-            <p>
-              I developed it using NodeJS, FFMpeg, HTML, JS, and CSS.
-              The backend is run on a Raspberry Pi 5, and stores a temporary cache of video/audio.
-            </p>
+        <div class="column is-half">
+          <div class="box background-image ytdl">
+            <h1 class="title is-5">YouTube Downloader</h1>
+            <div class="content is-size-6">
+              <p>YouTube Downloader, or YTDL, allows you to download YouTube videos in MP4, WEBM, and MP3, and also allows you to specify format/bitrate.</p>
+              <p>
+                I developed it using NodeJS, FFMpeg, HTML, JS, and CSS.
+                The backend is run on a Raspberry Pi 5, and stores a temporary cache of video/audio.
+              </p>
+            </div>
+            <div class="buttons is-centered">
+              <button class="button is-light is-outlined is-rounded" disabled><span>Live Demo Not Available</span></button>
+              <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/youtube-downloader" target="_blank"><span>Source Code</span></a>
+            </div>
           </div>
-          <a class="button is-light is-outlined is-rounded" disabled><span>Live Demo Not Available</span></a>
-          <a class="button is-light is-outlined is-rounded" href="https://github.com/zayndamji/youtube-downloader" target="_blank"><span>Source Code</span></a>
         </div>
       </div>
     </div>
   </section>
-
-  <br>
 </body>
 
 <script src="script.js"></script>

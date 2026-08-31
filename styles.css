@@ -8,9 +8,28 @@ body {
   background-color: rgb(24, 24, 24);
 }
 
-body, .navbar, .title, .subtitle, .content {
+body, .navbar, .navbar-item, .title, .subtitle, .content {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
+}
+
+.navbar a.navbar-item:hover {
+  background-color: rgb(38, 38, 38);
+  color: white;
+}
+
+.navbar-brand {
+  flex-grow: 1;
+}
+
+.explore::before {
+  content: '↓';
+  margin-right: 1.6rem;
+}
+
+.explore::after {
+  content: '↓';
+  margin-left: 1.6rem;
 }
 
 a.white-link {
@@ -21,14 +40,26 @@ a.white-link:hover {
   color: rgb(105, 150, 255);
 }
 
+.projects .column {
+  display: flex;
+}
+
 .box.background-image {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  padding: 4rem;
-  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border-radius: clamp(16px, 4vw, 48px);
   font-weight: 500;
+}
+
+.box.background-image .content {
+  flex-grow: 1;
 }
 
 .box.background-image.robotevents-api {
