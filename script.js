@@ -2,7 +2,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 
 function typeStatus(text) {
   const target = document.getElementById('now');
-  if (!target) return;
+  if (!target || !text) return;
 
   if (reduceMotion) {
     target.textContent = text;
@@ -30,7 +30,10 @@ function highlightRailOnScroll() {
 
     const current = [...linkFor.keys()].filter(id => onScreen.has(id)).pop();
     for (const link of links) {
-      link.classList.toggle('active', link === linkFor.get(current));
+      const active = link === linkFor.get(current);
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
     }
   }, { rootMargin: '-10% 0px -60% 0px' });
 
@@ -39,5 +42,6 @@ function highlightRailOnScroll() {
   }
 }
 
-typeStatus('building Strata');
+const fallback = document.querySelector('.typed noscript');
+typeStatus(fallback ? fallback.textContent.trim() : '');
 highlightRailOnScroll();

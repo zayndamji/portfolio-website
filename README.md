@@ -5,7 +5,6 @@ View the live portfolio at [zayndamji.dev](https://zayndamji.dev).
 ## Stack
 
 Plain HTML, CSS, and JavaScript. No framework and no build step.
-Type is Inter and JetBrains Mono, loaded from Google Fonts.
 
 ## Running locally
 
@@ -21,5 +20,6 @@ styles.css      tokens, layout, and every component
 script.js       the typing status line and the rail scroll-spy
 server.js       local development server
 screenshots/    project captures
+fonts/          self-hosted fonts
 favicon.png     favicon
 ```

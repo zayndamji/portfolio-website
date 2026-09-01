@@ -1,3 +1,46 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
 :root {
   --bg:         #08090b;
   --surface:    #0e1013;
@@ -6,13 +49,21 @@
 
   --rule:       #1f242b;
   --rule-hi:    #2f3740;
+  --rule-hover: #3c4550;
 
   --ink:        #e8ebee;
   --ink-2:      #8d959f;
   --ink-3:      #7d8590;
 
   --sig:        #87b4ff;
+  --sig-hi:     #a6c8ff;
+  --on-sig:     #06121f;
   --live:       #5ed37a;
+  --live-ring:  rgb(94 211 122 / 14%);
+
+  --chrome-red:   #ff5f57;
+  --chrome-amber: #febc2e;
+  --chrome-green: #28c840;
 
   --gutter: clamp(1.1rem, 4vw, 3rem);
   --ease:   cubic-bezier(0.16, 1, 0.3, 1);
@@ -29,6 +80,7 @@
 }
 
 html {
+  color-scheme: dark;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   scrollbar-color: var(--rule-hi) var(--bg);
@@ -42,7 +94,6 @@ body {
   font-size: 16px;
   line-height: 1.62;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -74,7 +125,7 @@ a {
 
 ::selection {
   background: var(--sig);
-  color: #06121f;
+  color: var(--on-sig);
 }
 
 ::-webkit-scrollbar {
@@ -92,12 +143,39 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d4650;
+  background: var(--rule-hover);
 }
 
 :focus-visible {
   outline: 2px solid var(--sig);
   outline-offset: 2px;
+}
+
+.skip {
+  position: absolute;
+  top: 0;
+  inset-inline-start: var(--gutter);
+  z-index: 2;
+  padding: 0.5rem 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--on-sig);
+  text-decoration: none;
+  background: var(--sig);
+  translate: 0 -100%;
+}
+
+.skip:focus {
+  translate: 0 0;
+}
+
+.skip:focus-visible {
+  outline-color: var(--ink);
+}
+
+main:focus {
+  outline: none;
 }
 
 
@@ -114,7 +192,17 @@ a {
 @media (min-width: 1040px) {
   .shell {
     grid-template-columns: 212px minmax(0, 1fr);
-    gap: clamp(2.5rem, 5vw, 5rem);
+    column-gap: clamp(2.5rem, 5vw, 5rem);
+  }
+
+  main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  footer {
+    grid-column: 2;
+    grid-row: 2;
   }
 }
 
@@ -128,6 +216,8 @@ a {
 @media (min-width: 1040px) {
   .rail {
     display: block;
+    grid-column: 1;
+    grid-row: 1 / span 2;
     position: sticky;
     top: 0;
     height: 100svh;
@@ -145,8 +235,8 @@ a {
   color: var(--ink);
 }
 
-.rail h4 {
-  margin: 0 0 0.6rem;
+.rail .rail-group {
+  margin-bottom: 0.6rem;
   font-family: var(--mono);
   font-size: 0.78rem;
   font-weight: 400;
@@ -309,6 +399,7 @@ a {
 .rec {
   padding-block: clamp(1.5rem, 3vw, 2rem);
   border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 2rem;
 }
 
 .sec > .rec:first-of-type {
@@ -332,6 +423,42 @@ a {
   }
 }
 
+@media (max-width: 859.98px) {
+  .rec-grid {
+    row-gap: 0;
+  }
+
+  .rec-grid > div:first-child {
+    display: contents;
+  }
+
+  .rec-grid > :last-child {
+    order: 4;
+    margin-top: 1.5rem;
+  }
+
+  .path {
+    order: 1;
+  }
+
+  .rec h3 {
+    order: 2;
+  }
+
+  .rec p {
+    order: 3;
+  }
+
+  .spec {
+    order: 5;
+  }
+
+  .acts {
+    order: 6;
+  }
+
+}
+
 .path {
   margin-bottom: 0.55rem;
   font-family: var(--mono);
@@ -340,10 +467,17 @@ a {
 }
 
 .path a {
+  position: relative;
   color: var(--sig);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.25s var(--ease);
+}
+
+.path a::after {
+  content: "";
+  position: absolute;
+  inset: -5px -2px;
 }
 
 .path a:hover {
@@ -404,7 +538,7 @@ a {
   height: 6px;
   border-radius: 50%;
   background: var(--live);
-  box-shadow: 0 0 0 3px rgb(94 211 122 / 14%);
+  box-shadow: 0 0 0 3px var(--live-ring);
 }
 
 .figs {
@@ -452,8 +586,7 @@ a {
   transition: border-color 0.4s var(--ease);
 }
 
-a.vp:hover,
-.rec:hover .vp {
+a.vp:hover {
   border-color: var(--rule-hi);
 }
 
@@ -495,15 +628,15 @@ a.vp:hover .vp-bar em {
 }
 
 .lights i:nth-child(1) {
-  background: #ff5f57;
+  background: var(--chrome-red);
 }
 
 .lights i:nth-child(2) {
-  background: #febc2e;
+  background: var(--chrome-amber);
 }
 
 .lights i:nth-child(3) {
-  background: #28c840;
+  background: var(--chrome-green);
 }
 
 .vp img {
@@ -554,7 +687,7 @@ a.vp:hover img {
 
 .btn:hover {
   background: var(--surface-3);
-  border-color: #3c4550;
+  border-color: var(--rule-hover);
 }
 
 .btn svg {
@@ -571,14 +704,14 @@ a.vp:hover img {
 
 .btn.primary {
   font-weight: 700;
-  color: #06121f;
+  color: var(--on-sig);
   background: var(--sig);
   border-color: var(--sig);
 }
 
 .btn.primary:hover {
-  background: #a6c8ff;
-  border-color: #a6c8ff;
+  background: var(--sig-hi);
+  border-color: var(--sig-hi);
 }
 
 
@@ -631,7 +764,19 @@ footer .out a:hover {
     animation: none;
   }
 
-  * {
-    transition-duration: 0.01ms !important;
+  .vp img {
+    transition: none;
+  }
+
+  a.vp:hover img {
+    scale: none;
+  }
+
+  .btn svg {
+    transition: opacity 0.28s var(--ease);
+  }
+
+  .btn:hover svg {
+    translate: none;
   }
 }
