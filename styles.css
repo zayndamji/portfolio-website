@@ -752,6 +752,12 @@ footer .out a:hover {
   background: var(--surface-2);
 }
 
+@media (min-width: 1040px) {
+  footer .out {
+    display: none;
+  }
+}
+
 
 /* Reduced motion */
 
