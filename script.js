@@ -1,34 +1,43 @@
-let typewriterText = "";
-const roles = ["Programmer", "Singer", "Developer", "Designer"];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let roleIndex = 0;
-let charIndex = 0;
+function typeStatus(text) {
+  const target = document.getElementById('now');
+  if (!target) return;
 
-let isDeleting = false;
-let typeTimeout;
-
-function type() {
-  const current = roles[roleIndex];
-  if (isDeleting) {
-    charIndex--;
-    typewriterText = current.substring(0, charIndex);
-  } else {
-    charIndex++;
-    typewriterText = current.substring(0, charIndex);
+  if (reduceMotion) {
+    target.textContent = text;
+    return;
   }
 
-  if (!isDeleting && charIndex === current.length) {
-    isDeleting = true;
-    typeTimeout = setTimeout(type, 1000);
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
-    typeTimeout = setTimeout(type, 200);
-  } else {
-    typeTimeout = setTimeout(type, isDeleting ? 25 : 100);
-  }
+  let length = 0;
 
-  document.getElementById('typewriter-text').innerHTML = typewriterText || '&nbsp;';
+  (function next() {
+    target.textContent = text.slice(0, ++length);
+    if (length < text.length) setTimeout(next, 62);
+  })();
 }
 
-type();
+function highlightRailOnScroll() {
+  const links = [...document.querySelectorAll('.rail a[href^="#"]')];
+  const linkFor = new Map(links.map(link => [link.hash.slice(1), link]));
+  const onScreen = new Set();
+
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) onScreen.add(entry.target.id);
+      else onScreen.delete(entry.target.id);
+    }
+
+    const current = [...linkFor.keys()].filter(id => onScreen.has(id)).pop();
+    for (const link of links) {
+      link.classList.toggle('active', link === linkFor.get(current));
+    }
+  }, { rootMargin: '-10% 0px -60% 0px' });
+
+  for (const project of document.querySelectorAll('.rec[id]')) {
+    observer.observe(project);
+  }
+}
+
+typeStatus('building Strata');
+highlightRailOnScroll();

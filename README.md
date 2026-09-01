@@ -4,26 +4,22 @@ View the live portfolio at [zayndamji.dev](https://zayndamji.dev).
 
 ## Stack
 
-The site contains plain HTML, CSS, and JavaScript. No build required.
-I use the [Bulma](https://bulma.io) CSS framework and Open Sans.
+Plain HTML, CSS, and JavaScript. No framework and no build step.
+Type is Inter and JetBrains Mono, loaded from Google Fonts.
 
 ## Running locally
 
-Option 1: open `index.html` directly. It should work out of the box.
+Option 1: open `index.html` directly. It works out of the box.  
 
-Option 2: run an Express server. It'll open on <http://localhost:8000>.
-
-```sh
-npm start
-```
+Option 2: run an Express server using `npm start`. The site will be live on <http://localhost:8000>.
 
 ## Layout
 
 ```text
 index.html      markup for the whole page
-styles.css      dark theme and card styles layered on Bulma
-script.js       typing animation in the header
+styles.css      tokens, layout, and every component
+script.js       the typing status line and the rail scroll-spy
 server.js       local development server
-screenshots/    project card backgrounds
-*.png           social icons, favicon, and the header illustration
+screenshots/    project captures
+favicon.png     favicon
 ```
