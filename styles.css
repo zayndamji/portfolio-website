@@ -163,11 +163,11 @@ a {
   color: var(--on-sig);
   text-decoration: none;
   background: var(--sig);
-  translate: 0 -100%;
+  clip-path: inset(100%);
 }
 
 .skip:focus {
-  translate: 0 0;
+  clip-path: none;
 }
 
 .skip:focus-visible {
