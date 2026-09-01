@@ -4,3 +4,14 @@ package-lock.json
 
 # MacOS system files
 .DS_Store
+
+# AI system files
+PRODUCT.md
+DESIGN.md
+CLAUDE.md
+AGENTS.md
+.impeccable
+.claude
+
+# Project artifacts
+prototypes
