@@ -35,6 +35,10 @@
       <path fill="currentColor"
         d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
     </symbol>
+    <symbol id="i-top" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 19V6M6 12l6-6 6 6" />
+    </symbol>
     <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
       stroke-linejoin="round">
       <path d="M7 17 17 7M9 7h8v8" />
@@ -43,31 +47,49 @@
 
   <div class="shell">
 
-    <nav class="rail" aria-label="Projects">
-      <div class="who">zayn damji</div>
+    <div class="rail">
 
-      <div class="rail-group" id="rail-featured">Featured</div>
-      <ul aria-labelledby="rail-featured">
-        <li><a href="#strata"><i>01</i> Strata</a></li>
-      </ul>
+      <header class="ident">
+        <h1>Zayn Damji</h1>
+        <p class="cred">Stanford '30 <span>/</span> B.S. CS + EE</p>
+        <p class="typed">Currently <span id="now"></span><noscript>building Strata</noscript><span class="caret"
+            aria-hidden="true"></span></p>
+      </header>
 
-      <div class="rail-group" id="rail-products">Products</div>
-      <ul aria-labelledby="rail-products">
-        <li><a href="#boost"><i>02</i> Boost Robotics</a></li>
-        <li><a href="#quizlet"><i>03</i> Improved Quizlet</a></li>
-        <li><a href="#notes"><i>04</i> iNotes</a></li>
-      </ul>
+      <nav class="idx" aria-label="Projects">
+        <div class="grp" id="rail-featured">Featured</div>
+        <ul aria-labelledby="rail-featured">
+          <li><a href="#strata"><i>01</i> Strata</a></li>
+        </ul>
 
-      <div class="rail-group" id="rail-tools">Tools</div>
-      <ul aria-labelledby="rail-tools">
-        <li><a href="#ytdl"><i>05</i> YouTube Downloader</a></li>
-      </ul>
+        <div class="grp" id="rail-products">Products</div>
+        <ul aria-labelledby="rail-products">
+          <li><a href="#boost"><i>02</i> Boost Robotics</a></li>
+          <li><a href="#quizlet"><i>03</i> Improved Quizlet</a></li>
+          <li><a href="#notes"><i>04</i> iNotes</a></li>
+        </ul>
 
-      <div class="rail-group" id="rail-games">Games</div>
-      <ul aria-labelledby="rail-games">
-        <li><a href="#flip"><i>06</i> Memory Flip</a></li>
-        <li><a href="#clicker"><i>07</i> Candy Clicker</a></li>
-      </ul>
+        <div class="grp" id="rail-tools">Tools</div>
+        <ul aria-labelledby="rail-tools">
+          <li><a href="#ytdl"><i>05</i> YouTube Downloader</a></li>
+        </ul>
+
+        <div class="grp" id="rail-games">Games</div>
+        <ul aria-labelledby="rail-games">
+          <li><a href="#flip"><i>06</i> Memory Flip</a></li>
+          <li><a href="#clicker"><i>07</i> Candy Clicker</a></li>
+        </ul>
+      </nav>
+
+      <nav class="jump" aria-labelledby="jump-key">
+        <span class="jump-key m" id="jump-key">Sections</span>
+        <ul>
+          <li><a href="#s-featured">Featured</a></li>
+          <li><a href="#s-products">Products</a></li>
+          <li><a href="#s-tools">Tools</a></li>
+          <li><a href="#s-games">Games</a></li>
+        </ul>
+      </nav>
 
       <div class="out">
         <a href="https://github.com/zayndamji" target="_blank" rel="noopener" aria-label="GitHub">
@@ -79,264 +101,286 @@
             <use href="#i-linkedin" />
           </svg></a>
       </div>
-    </nav>
+
+    </div>
 
     <main id="main" tabindex="-1">
 
-      <header class="hero">
-        <div class="cred">Stanford '30 <span>/</span> B.S. CS + EE</div>
-        <h1>Zayn Damji</h1>
-        <div class="typed">Currently <span id="now"></span><noscript>building Strata</noscript><span class="caret"
-            aria-hidden="true"></span></div>
-      </header>
 
-      <section class="sec" aria-labelledby="sec-featured">
+      <section class="sec" id="s-featured" aria-labelledby="sec-featured">
         <h2 id="sec-featured">Featured</h2>
 
         <article class="rec featured" id="strata">
           <div class="rec-grid">
-            <div>
+            <div class="rec-head">
               <div class="path m">~/ <a href="https://strataplanner.app" target="_blank"
-                  rel="noopener">strataplanner.app</a></div>
+                rel="noopener">strataplanner.app</a></div>
               <h3>Strata</h3>
               <p>A course planner for Stanford students. Browse the full catalog, try on a major, and lay out all four
                 years in one place. Plans sync across every device.</p>
-              <div class="spec">
-                <div><span class="k">Dates</span><span class="v">May 2026 – Present</span></div>
-                <div><span class="k">Frontend</span><span class="v">React · TypeScript · Vite</span></div>
-                <div><span class="k">Backend</span><span class="v">Node · Express · Cheerio · Cloudflare</span></div>
-                <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
-                      Live</span></span></div>
-              </div>
-              <div class="acts">
-                <a class="btn primary" href="https://strataplanner.app" target="_blank" rel="noopener">open strata
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-out" />
-                  </svg></a>
-              </div>
             </div>
-            <div>
+            <div class="rec-media">
               <a class="vp" href="https://strataplanner.app" target="_blank" rel="noopener">
-                <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://strataplanner.app</em>
+                  <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://strataplanner.app</em>
+                  </div>
+                  <img width="1600" height="600" loading="eager" fetchpriority="high" decoding="async"
+                    src="screenshots/strata.webp"
+                    alt="Strata's course browser listing Stanford courses with requirement tags, terms and unit counts">
+                </a>
+                <div class="figs">
+                  <div><b>21,073</b><span>Course listings</span></div>
+                  <div><b>187</b><span>Academic programs</span></div>
+                  <div><b>5</b><span>Catalog years</span></div>
                 </div>
-                <img width="1600" height="600" loading="eager" fetchpriority="high" decoding="async"
-                  src="screenshots/strata.webp"
-                  alt="Strata's course browser listing Stanford courses with requirement tags, terms and unit counts">
-              </a>
-              <div class="figs">
-                <div><b>21,073</b><span>Course listings</span></div>
-                <div><b>187</b><span>Academic programs</span></div>
-                <div><b>5</b><span>Catalog years</span></div>
-              </div>
+
+            </div>
+            <div class="rec-foot">
+              <div class="spec">
+                  <div><span class="k">Dates</span><span class="v">May 2026 – Present</span></div>
+                  <div><span class="k">Frontend</span><span class="v">React · TypeScript · Vite</span></div>
+                  <div><span class="k">Backend</span><span class="v">Node · Express · Cheerio · Cloudflare</span></div>
+                  <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
+                        Live</span></span></div>
+                </div>
+              <div class="acts">
+                  <a class="btn primary" href="https://strataplanner.app" target="_blank" rel="noopener">open strata
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-out" />
+                    </svg></a>
+                </div>
             </div>
           </div>
         </article>
       </section>
 
-      <section class="sec" aria-labelledby="sec-products">
+      <section class="sec" id="s-products" aria-labelledby="sec-products">
         <h2 id="sec-products">Products</h2>
 
         <article class="rec" id="boost">
           <div class="rec-grid">
-            <div>
+            <div class="rec-head">
               <div class="path m">~/ <a href="https://boostrobotics.org" target="_blank"
-                  rel="noopener">boostrobotics.org</a></div>
+                rel="noopener">boostrobotics.org</a></div>
               <h3>Boost Robotics</h3>
               <p>The home of Boost Robotics, an organization bringing competitive VEX robotics to groups
                 underrepresented in STEM. Custom authentication gates the curriculum for enrolled users.</p>
-              <div class="spec">
-                <div><span class="k">Dates</span><span class="v">Jun 2023 – Dec 2025</span></div>
-                <div><span class="k">Stack</span><span class="v">Node · Pug · Express</span></div>
-                <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
-                      Live</span></span></div>
-              </div>
-              <div class="acts">
-                <a class="btn" href="https://boostrobotics.org" target="_blank" rel="noopener">visit
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-out" />
-                  </svg></a>
-              </div>
             </div>
-            <a class="vp" href="https://boostrobotics.org" target="_blank" rel="noopener">
-              <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://boostrobotics.org</em>
-              </div>
-              <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/boost.webp"
-                alt="The Boost Robotics site showing its mission statement and program model">
-            </a>
+            <div class="rec-media">
+              <a class="vp" href="https://boostrobotics.org" target="_blank" rel="noopener">
+                  <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://boostrobotics.org</em>
+                  </div>
+                  <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/boost.webp"
+                    alt="The Boost Robotics site showing its mission statement and program model">
+                </a>
+            </div>
+            <div class="rec-foot">
+              <div class="spec">
+                  <div><span class="k">Dates</span><span class="v">Jun 2023 – Dec 2025</span></div>
+                  <div><span class="k">Stack</span><span class="v">Node · Pug · Express</span></div>
+                  <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
+                        Live</span></span></div>
+                </div>
+              <div class="acts">
+                  <a class="btn primary" href="https://boostrobotics.org" target="_blank" rel="noopener">visit
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-out" />
+                    </svg></a>
+                </div>
+            </div>
           </div>
         </article>
 
         <article class="rec" id="quizlet">
           <div class="rec-grid">
-            <div>
+            <div class="rec-head">
               <div class="path m">~/ <a href="https://quiz.zayndamji.dev/" target="_blank"
-                  rel="noopener">quiz.zayndamji.dev</a></div>
+                rel="noopener">quiz.zayndamji.dev</a></div>
               <h3>Improved Quizlet</h3>
               <p>A quizzing site that does the one thing a quizzing site should. A compile script folds the whole app
                 into a single file, so serving it costs almost nothing.</p>
-              <div class="spec">
-                <div><span class="k">Dates</span><span class="v">Apr 2023 – Aug 2026</span></div>
-                <div><span class="k">Stack</span><span class="v">Node · Pug</span></div>
-                <div><span class="k">Source</span><span class="v">github.com/zayndamji/improved-quizlet</span></div>
-                <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
-                      Live</span></span></div>
-              </div>
-              <div class="acts">
-                <a class="btn" href="https://quiz.zayndamji.dev/" target="_blank" rel="noopener">visit
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-out" />
-                  </svg></a>
-                <a class="btn" href="https://github.com/zayndamji/improved-quizlet" target="_blank" rel="noopener">
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-github" />
-                  </svg> source</a>
-              </div>
             </div>
-            <a class="vp" href="https://quiz.zayndamji.dev/" target="_blank" rel="noopener">
-              <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://quiz.zayndamji.dev</em>
-              </div>
-              <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/improvedquizlet.webp"
-                alt="Improved Quizlet matching Spanish and English phrase pairs in a study grid">
-            </a>
+            <div class="rec-media">
+              <a class="vp" href="https://quiz.zayndamji.dev/" target="_blank" rel="noopener">
+                  <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://quiz.zayndamji.dev</em>
+                  </div>
+                  <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/improvedquizlet.webp"
+                    alt="Improved Quizlet matching Spanish and English phrase pairs in a study grid">
+                </a>
+            </div>
+            <div class="rec-foot">
+              <div class="spec">
+                  <div><span class="k">Dates</span><span class="v">Apr 2023 – Aug 2026</span></div>
+                  <div><span class="k">Stack</span><span class="v">Node · Pug</span></div>
+                  <div><span class="k">Source</span><span class="v">github.com/zayndamji/improved-quizlet</span></div>
+                  <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
+                        Live</span></span></div>
+                </div>
+              <div class="acts">
+                  <a class="btn primary" href="https://quiz.zayndamji.dev/" target="_blank" rel="noopener">visit
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-out" />
+                    </svg></a>
+                  <a class="btn" href="https://github.com/zayndamji/improved-quizlet" target="_blank" rel="noopener">
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-github" />
+                    </svg> source</a>
+                </div>
+            </div>
           </div>
         </article>
 
         <article class="rec" id="notes">
           <div class="rec-grid">
-            <div>
+            <div class="rec-head">
               <div class="path m">~/ <a href="https://notes.zayndamji.dev/" target="_blank"
-                  rel="noopener">notes.zayndamji.dev</a></div>
+                rel="noopener">notes.zayndamji.dev</a></div>
               <h3>iNotes</h3>
               <p>A notes app that keeps everything in your own browser.</p>
-              <div class="spec">
-                <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
-                <div><span class="k">Stack</span><span class="v">HTML · CSS · JavaScript</span></div>
-                <div><span class="k">Source</span><span class="v">github.com/zayndamji/iNotes</span></div>
-                <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
-                      Live</span></span></div>
-              </div>
-              <div class="acts">
-                <a class="btn" href="https://notes.zayndamji.dev/" target="_blank" rel="noopener">open app
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-out" />
-                  </svg></a>
-                <a class="btn" href="https://github.com/zayndamji/iNotes" target="_blank" rel="noopener">
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-github" />
-                  </svg> source</a>
-              </div>
             </div>
-            <a class="vp" href="https://notes.zayndamji.dev/" target="_blank" rel="noopener">
-              <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://notes.zayndamji.dev</em>
-              </div>
-              <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/notes.webp"
-                alt="The iNotes editor with a demo note explaining bold and italic keyboard shortcuts">
-            </a>
+            <div class="rec-media">
+              <a class="vp" href="https://notes.zayndamji.dev/" target="_blank" rel="noopener">
+                  <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://notes.zayndamji.dev</em>
+                  </div>
+                  <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/notes.webp"
+                    alt="The iNotes editor with a demo note explaining bold and italic keyboard shortcuts">
+                </a>
+            </div>
+            <div class="rec-foot">
+              <div class="spec">
+                  <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
+                  <div><span class="k">Stack</span><span class="v">HTML · CSS · JavaScript</span></div>
+                  <div><span class="k">Source</span><span class="v">github.com/zayndamji/iNotes</span></div>
+                  <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
+                        Live</span></span></div>
+                </div>
+              <div class="acts">
+                  <a class="btn" href="https://notes.zayndamji.dev/" target="_blank" rel="noopener">open app
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-out" />
+                    </svg></a>
+                  <a class="btn" href="https://github.com/zayndamji/iNotes" target="_blank" rel="noopener">
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-github" />
+                    </svg> source</a>
+                </div>
+            </div>
           </div>
         </article>
       </section>
 
-      <section class="sec" aria-labelledby="sec-tools">
+      <section class="sec" id="s-tools" aria-labelledby="sec-tools">
         <h2 id="sec-tools">Tools</h2>
 
         <article class="rec" id="ytdl">
           <div class="rec-grid">
-            <div>
+            <div class="rec-head">
               <div class="path m">~/ youtube-downloader</div>
               <h3>YouTube Downloader</h3>
               <p>Downloads YouTube video as MP4, WEBM or MP3 with the format and bitrate you pick. The backend keeps a
                 temporary cache of video and audio.</p>
-              <div class="spec">
-                <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
-                <div><span class="k">Stack</span><span class="v">Node · FFmpeg</span></div>
-                <div><span class="k">Runs on</span><span class="v">Raspberry Pi 5</span></div>
-                <div><span class="k">Source</span><span class="v">github.com/zayndamji/youtube-downloader</span></div>
-              </div>
-              <div class="acts">
-                <a class="btn" href="https://github.com/zayndamji/youtube-downloader" target="_blank"
-                  rel="noopener"><svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-github" />
-                  </svg> source</a>
-              </div>
             </div>
-            <div class="vp">
-              <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>localhost:9356</em></div>
-              <img width="960" height="540" loading="lazy" decoding="async" src="screenshots/ytdl.webp"
-                alt="The YouTube Downloader interface with format, video and audio quality selectors">
+            <div class="rec-media">
+              <div class="vp">
+                  <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>localhost:9356</em></div>
+                  <img width="960" height="540" loading="lazy" decoding="async" src="screenshots/ytdl.webp"
+                    alt="The YouTube Downloader interface with format, video and audio quality selectors">
+                </div>
+            </div>
+            <div class="rec-foot">
+              <div class="spec">
+                  <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
+                  <div><span class="k">Stack</span><span class="v">Node · FFmpeg</span></div>
+                  <div><span class="k">Runs on</span><span class="v">Raspberry Pi 5</span></div>
+                  <div><span class="k">Source</span><span class="v">github.com/zayndamji/youtube-downloader</span></div>
+                </div>
+              <div class="acts">
+                  <a class="btn" href="https://github.com/zayndamji/youtube-downloader" target="_blank"
+                    rel="noopener"><svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-github" />
+                    </svg> source</a>
+                </div>
             </div>
           </div>
         </article>
       </section>
 
-      <section class="sec" aria-labelledby="sec-games">
+      <section class="sec" id="s-games" aria-labelledby="sec-games">
         <h2 id="sec-games">Games</h2>
 
         <article class="rec" id="flip">
           <div class="rec-grid">
-            <div>
+            <div class="rec-head">
               <div class="path m">~/ <a href="https://flip.zayndamji.dev/" target="_blank"
-                  rel="noopener">flip.zayndamji.dev</a></div>
+                rel="noopener">flip.zayndamji.dev</a></div>
               <h3>Memory Flip</h3>
               <p>A card-matching game that tests recall, with board sizes and light and dark themes you can switch
                 between mid-game.</p>
-              <div class="spec">
-                <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
-                <div><span class="k">Stack</span><span class="v">HTML · CSS · JavaScript</span></div>
-                <div><span class="k">Source</span><span class="v">github.com/zayndamji/memory-flip</span></div>
-                <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
-                      Live</span></span></div>
-              </div>
-              <div class="acts">
-                <a class="btn" href="https://flip.zayndamji.dev/" target="_blank" rel="noopener">play
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-out" />
-                  </svg></a>
-                <a class="btn" href="https://github.com/zayndamji/memory-flip" target="_blank" rel="noopener">
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-github" />
-                  </svg> source</a>
-              </div>
             </div>
-            <a class="vp" href="https://flip.zayndamji.dev/" target="_blank" rel="noopener">
-              <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://flip.zayndamji.dev</em>
-              </div>
-              <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/flip.webp"
-                alt="Memory Flip's four-by-four board with two cards turned face up">
-            </a>
+            <div class="rec-media">
+              <a class="vp" href="https://flip.zayndamji.dev/" target="_blank" rel="noopener">
+                  <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://flip.zayndamji.dev</em>
+                  </div>
+                  <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/flip.webp"
+                    alt="Memory Flip's four-by-four board with two cards turned face up">
+                </a>
+            </div>
+            <div class="rec-foot">
+              <div class="spec">
+                  <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
+                  <div><span class="k">Stack</span><span class="v">HTML · CSS · JavaScript</span></div>
+                  <div><span class="k">Source</span><span class="v">github.com/zayndamji/memory-flip</span></div>
+                  <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
+                        Live</span></span></div>
+                </div>
+              <div class="acts">
+                  <a class="btn" href="https://flip.zayndamji.dev/" target="_blank" rel="noopener">play
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-out" />
+                    </svg></a>
+                  <a class="btn" href="https://github.com/zayndamji/memory-flip" target="_blank" rel="noopener">
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-github" />
+                    </svg> source</a>
+                </div>
+            </div>
           </div>
         </article>
 
         <article class="rec" id="clicker">
           <div class="rec-grid">
-            <div>
+            <div class="rec-head">
               <div class="path m">~/ <a href="https://clicker.zayndamji.dev/" target="_blank"
-                  rel="noopener">clicker.zayndamji.dev</a></div>
+                rel="noopener">clicker.zayndamji.dev</a></div>
               <h3>Candy Clicker</h3>
               <p>Click candy, earn points, buy upgrades, earn more candy.</p>
-              <div class="spec">
-                <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
-                <div><span class="k">Stack</span><span class="v">HTML · CSS · JavaScript</span></div>
-                <div><span class="k">Source</span><span class="v">github.com/zayndamji/candy-clicker</span></div>
-                <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
-                      Live</span></span></div>
-              </div>
-              <div class="acts">
-                <a class="btn" href="https://clicker.zayndamji.dev/" target="_blank" rel="noopener">play
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-out" />
-                  </svg></a>
-                <a class="btn" href="https://github.com/zayndamji/candy-clicker" target="_blank" rel="noopener">
-                  <svg width="13" height="13" aria-hidden="true">
-                    <use href="#i-github" />
-                  </svg> source</a>
-              </div>
             </div>
-            <a class="vp" href="https://clicker.zayndamji.dev/" target="_blank" rel="noopener">
-              <div class="vp-bar"><span
-                  class="lights"><i></i><i></i><i></i></span><em>https://clicker.zayndamji.dev</em></div>
-              <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/clicker.webp"
-                alt="Candy Clicker's board with a candy count, upgrade panel and a Halloween scene">
-            </a>
+            <div class="rec-media">
+              <a class="vp" href="https://clicker.zayndamji.dev/" target="_blank" rel="noopener">
+                  <div class="vp-bar"><span
+                      class="lights"><i></i><i></i><i></i></span><em>https://clicker.zayndamji.dev</em></div>
+                  <img width="1600" height="900" loading="lazy" decoding="async" src="screenshots/clicker.webp"
+                    alt="Candy Clicker's board with a candy count, upgrade panel and a Halloween scene">
+                </a>
+            </div>
+            <div class="rec-foot">
+              <div class="spec">
+                  <div><span class="k">Dates</span><span class="v">Nov 2024</span></div>
+                  <div><span class="k">Stack</span><span class="v">HTML · CSS · JavaScript</span></div>
+                  <div><span class="k">Source</span><span class="v">github.com/zayndamji/candy-clicker</span></div>
+                  <div><span class="k">Status</span><span class="v"><span class="status"><i class="dot"></i>
+                        Live</span></span></div>
+                </div>
+              <div class="acts">
+                  <a class="btn" href="https://clicker.zayndamji.dev/" target="_blank" rel="noopener">play
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-out" />
+                    </svg></a>
+                  <a class="btn" href="https://github.com/zayndamji/candy-clicker" target="_blank" rel="noopener">
+                    <svg width="13" height="13" aria-hidden="true">
+                      <use href="#i-github" />
+                    </svg> source</a>
+                </div>
+            </div>
           </div>
         </article>
       </section>
@@ -358,6 +402,12 @@
     </footer>
 
   </div>
+
+  <a class="totop" href="#main">
+    <svg width="13" height="13" aria-hidden="true">
+      <use href="#i-top" />
+    </svg> top
+  </a>
 
   <script src="script.js"></script>
 </body>

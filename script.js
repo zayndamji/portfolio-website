@@ -18,30 +18,62 @@ function typeStatus(text) {
 }
 
 function highlightRailOnScroll() {
-  const links = [...document.querySelectorAll('.rail a[href^="#"]')];
+  const links = [...document.querySelectorAll('.idx a[href^="#"]')];
   const linkFor = new Map(links.map(link => [link.hash.slice(1), link]));
-  const onScreen = new Set();
+  const records = [...document.querySelectorAll('.rec[id]')];
+  if (!records.length) return;
 
-  const observer = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) onScreen.add(entry.target.id);
-      else onScreen.delete(entry.target.id);
+  let marked;
+  let queued = false;
+
+  function mark() {
+    queued = false;
+
+    const line = window.innerHeight * 0.4;
+    const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    let current = records[0].id;
+
+    if (atEnd) {
+      current = records[records.length - 1].id;
+    } else {
+      for (const record of records) {
+        if (record.getBoundingClientRect().top <= line) current = record.id;
+      }
     }
 
-    const current = [...linkFor.keys()].filter(id => onScreen.has(id)).pop();
+    if (current === marked) return;
+    marked = current;
+
     for (const link of links) {
       const active = link === linkFor.get(current);
       link.classList.toggle('active', active);
       if (active) link.setAttribute('aria-current', 'true');
       else link.removeAttribute('aria-current');
     }
-  }, { rootMargin: '-10% 0px -60% 0px' });
-
-  for (const project of document.querySelectorAll('.rec[id]')) {
-    observer.observe(project);
   }
+
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(mark);
+  }
+
+  mark();
+  addEventListener('scroll', schedule, { passive: true });
+  addEventListener('resize', schedule, { passive: true });
+}
+
+function backToTop() {
+  const button = document.querySelector('.totop');
+  const hero = document.querySelector('.ident');
+  if (!button || !hero) return;
+
+  new IntersectionObserver(([entry]) => {
+    button.classList.toggle('show', !entry.isIntersecting);
+  }).observe(hero);
 }
 
 const fallback = document.querySelector('.typed noscript');
 typeStatus(fallback ? fallback.textContent.trim() : '');
 highlightRailOnScroll();
+backToTop();
