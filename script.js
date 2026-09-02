@@ -69,11 +69,27 @@ function highlightRailOnScroll() {
 function backToTop() {
   const button = document.querySelector('.totop');
   const hero = document.querySelector('.ident');
+  const footer = document.querySelector('footer');
   if (!button || !hero) return;
 
+  let pastHero = false;
+  let nearEnd = false;
+
+  function update() {
+    button.classList.toggle('show', pastHero && !nearEnd);
+  }
+
   new IntersectionObserver(([entry]) => {
-    button.classList.toggle('show', !entry.isIntersecting);
+    pastHero = !entry.isIntersecting;
+    update();
   }).observe(hero);
+
+  if (footer) {
+    new IntersectionObserver(([entry]) => {
+      nearEnd = entry.isIntersecting;
+      update();
+    }, { rootMargin: '0px 0px 24px 0px' }).observe(footer);
+  }
 }
 
 const fallback = document.querySelector('.typed noscript');
