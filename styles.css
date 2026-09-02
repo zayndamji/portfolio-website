@@ -42,34 +42,34 @@
 
 
 :root {
-  --bg:         #08090b;
-  --surface:    #0e1013;
-  --surface-2:  #14171c;
-  --surface-3:  #1b1f25;
+  --bg: #08090b;
+  --surface: #0e1013;
+  --surface-2: #14171c;
+  --surface-3: #1b1f25;
 
-  --rule:       #1f242b;
-  --rule-hi:    #2f3740;
+  --rule: #1f242b;
+  --rule-hi: #2f3740;
   --rule-hover: #3c4550;
-  --rule-btn:   #606a75;
+  --rule-btn: #606a75;
 
-  --ink:        #e8ebee;
-  --ink-2:      #8d959f;
-  --ink-3:      #7d8590;
+  --ink: #e8ebee;
+  --ink-2: #8d959f;
+  --ink-3: #7d8590;
 
-  --sig:        #87b4ff;
-  --sig-hi:     #a6c8ff;
-  --on-sig:     #06121f;
-  --live:       #5ed37a;
-  --live-ring:  rgb(94 211 122 / 14%);
+  --sig: #87b4ff;
+  --sig-hi: #a6c8ff;
+  --on-sig: #06121f;
+  --live: #5ed37a;
+  --live-ring: rgb(94 211 122 / 14%);
 
-  --chrome-red:   #ff5f57;
+  --chrome-red: #ff5f57;
   --chrome-amber: #febc2e;
   --chrome-green: #28c840;
 
-  --rail:   256px;
+  --rail: 256px;
   --gutter: clamp(1.1rem, 4vw, 3rem);
-  --ease:   cubic-bezier(0.16, 1, 0.3, 1);
-  --mono:   "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 
@@ -276,10 +276,12 @@ main:focus {
 }
 
 @keyframes blink {
+
   0%,
   49% {
     opacity: 1;
   }
+
   50%,
   100% {
     opacity: 0;
@@ -495,7 +497,7 @@ main:focus {
   border-top: 1px solid var(--rule-hi);
 }
 
-.sec > h2 {
+.sec>h2 {
   margin-bottom: clamp(1rem, 2vw, 1.6rem);
   font-family: var(--mono);
   font-size: 0.85rem;
@@ -511,7 +513,7 @@ main:focus {
   scroll-margin-top: 2rem;
 }
 
-.sec > .rec:first-of-type {
+.sec>.rec:first-of-type {
   padding-top: 0;
 }
 
