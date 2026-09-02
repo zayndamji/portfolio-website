@@ -1,4 +1,7 @@
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const stillShot = location.search.includes('still');
+const reduceMotion = stillShot || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (stillShot) document.documentElement.classList.add('still');
 
 function typeStatus(text) {
   const target = document.getElementById('now');

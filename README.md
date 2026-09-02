@@ -19,6 +19,9 @@ index.html      markup for the whole page
 styles.css      tokens, layout, and every component
 script.js       the typing status line and the rail scroll-spy
 server.js       local development server
+og-card.html    source for the link-preview image
+build-og.js     renders og-card.html to og.png
+og.png          link-preview image (1800x945)
 screenshots/    project captures
 fonts/          self-hosted fonts
 favicon.png     favicon

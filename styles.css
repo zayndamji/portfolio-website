@@ -270,6 +270,11 @@ main:focus {
   animation: blink 1.05s steps(1, end) infinite;
 }
 
+/* Held still for the social card capture, so the caret never lands mid-blink. */
+.still .caret {
+  animation: none;
+}
+
 @keyframes blink {
   0%,
   49% {

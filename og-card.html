@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Source for og.png. Render with: node build-og.js -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Social card</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background:
+        radial-gradient(120% 90% at 8% 0%, #14171c 0%, transparent 60%),
+        var(--bg);
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--ink);
+    }
+
+    .copy {
+      position: absolute;
+      top: 84px;
+      left: 74px;
+      width: 470px;
+    }
+
+    .copy h1 {
+      margin: 0;
+      font-size: 76px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .copy .cred {
+      margin: 22px 0 0;
+      font-family: var(--mono);
+      font-size: 21px;
+      letter-spacing: 0.02em;
+      color: var(--ink-2);
+    }
+
+    .copy .cred span {
+      color: var(--rule-hi);
+    }
+
+    .copy hr {
+      width: 84px;
+      margin: 30px 0;
+      border: 0;
+      border-top: 1px solid var(--rule-hi);
+    }
+
+    .copy .blurb {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.45;
+      color: var(--ink-2);
+    }
+
+    .copy .blurb b {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .domain {
+      position: absolute;
+      bottom: 78px;
+      left: 74px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 22px;
+      letter-spacing: 0.01em;
+      color: var(--sig);
+    }
+
+    .domain i {
+      display: block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--live);
+      box-shadow: 0 0 0 5px var(--live-ring);
+    }
+
+    .shot {
+      position: absolute;
+      top: 96px;
+      left: 610px;
+      width: 700px;
+      background: var(--surface);
+      border: 1px solid var(--rule-hi);
+      box-shadow: 0 40px 90px rgb(0 0 0 / 55%);
+    }
+
+    .shot .vp-bar {
+      padding: 11px 16px;
+      gap: 12px;
+    }
+
+    .shot .vp-bar em {
+      font-size: 16px;
+    }
+
+    .shot .lights i {
+      width: 12px;
+      height: 12px;
+    }
+
+    .frame {
+      position: relative;
+      height: 396px;
+      overflow: hidden;
+    }
+
+    .frame iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1120px;
+      height: 730px;
+      border: 0;
+      transform: scale(0.625);
+      transform-origin: 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+
+    <div class="copy">
+      <h1>Zayn Damji</h1>
+      <p class="cred">Stanford '30 <span>/</span> B.S. CS + EE</p>
+      <hr>
+      <p class="blurb">I build <b>web apps</b>, <b>developer tools</b>, and software for <b>robotics</b>.</p>
+    </div>
+
+    <div class="domain"><i></i>zayndamji.dev</div>
+
+    <div class="shot">
+      <div class="vp-bar"><span class="lights"><i></i><i></i><i></i></span><em>https://zayndamji.dev</em></div>
+      <div class="frame"><iframe src="index.html?still" scrolling="no" tabindex="-1"></iframe></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
