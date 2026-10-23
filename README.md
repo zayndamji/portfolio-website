@@ -2,10 +2,6 @@
 
 View the live portfolio at [zayndamji.dev](https://zayndamji.dev).
 
-## Stack
-
-Plain HTML, CSS, and JavaScript. No framework and no build step.
-
 ## Running locally
 
 Option 1: open `index.html` directly. It works out of the box.  
@@ -15,9 +11,9 @@ Option 2: run an Express server using `npm start`. The site will be live on <htt
 ## Layout
 
 ```text
-index.html      markup for the whole page
-styles.css      tokens, layout, and every component
-script.js       the typing status line and the rail scroll-spy
+index.html      html source code
+styles.css      tokens, layout, and components
+script.js       scripts for dynamic components
 server.js       local development server
 og-card.html    source for the link-preview image
 build-og.js     renders og-card.html to og.png

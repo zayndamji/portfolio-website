@@ -59,8 +59,6 @@
   --sig: #87b4ff;
   --sig-hi: #a6c8ff;
   --on-sig: #06121f;
-  --live: #5ed37a;
-  --live-ring: rgb(94 211 122 / 14%);
 
   --chrome-red: #ff5f57;
   --chrome-amber: #febc2e;
@@ -542,21 +540,6 @@ main:focus {
 .spec .v {
   color: var(--ink-2);
   word-break: break-word;
-}
-
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  color: var(--ink);
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--live);
-  box-shadow: 0 0 0 3px var(--live-ring);
 }
 
 .figs {
